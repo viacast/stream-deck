@@ -1,0 +1,27 @@
+{
+  "buttonMapping": {
+    "<Button>": "<TypeKey>"
+  },
+  "images": {
+    "<ImageKey>": "<ImagePath>"
+  },
+  "actions": {
+    "<ActionKey>": "<ActionPath>"
+  },
+  "types": {
+    "<TypeKey>": {
+      "events": {
+        "onPress": "<ActionKey>",
+        "onRelease": "<ActionKey>"
+      },
+      "text": {
+        "default": "<str>",
+        "pressed": "<str>"
+      },
+      "images": {
+        "default": "<ImageKey>",
+        "pressed": "<ImageKey>"
+      }
+    }
+  }
+}
