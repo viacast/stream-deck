@@ -21,7 +21,7 @@
         "default": "",
         "pressed": ""
       },
-      "image": {
+      "images": {
         "default": "play",
         "pressed": "play"
       }

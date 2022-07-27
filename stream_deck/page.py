@@ -19,12 +19,10 @@ class Page:
     }
     self.images = images
     self.actions = actions
-    self.types = types
+    self.types = {
+        k: Type(**v)
+        for k, v in types.items()
+    }
 
   def __str__(self) -> str:
-    return dumps({
-        'buttonMapping': self.buttonMapping,
-        'images': self.images,
-        'actions': self.actions,
-        'types': self.types,
-    }, indent=2)
+    return dumps(self, default=vars, indent=2)

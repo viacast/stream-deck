@@ -1,4 +1,6 @@
+from json import dumps
 from typing import Optional
+
 from .keys import ActionKey, ImageKey
 
 
@@ -10,6 +12,9 @@ class ButtonEvents:
     self.onPress = onPress
     self.onRelease = onRelease
 
+  def __str__(self) -> str:
+    return dumps(self, default=vars, indent=2)
+
 
 class ButtonText:
   default: Optional[str]
@@ -19,8 +24,11 @@ class ButtonText:
     self.default = default
     self.pressed = pressed
 
+  def __str__(self) -> str:
+    return dumps(self, default=vars, indent=2)
 
-class ButtonImage:
+
+class ButtonImages:
   default: Optional[ImageKey]
   pressed: Optional[ImageKey]
 
@@ -28,13 +36,19 @@ class ButtonImage:
     self.default = default
     self.pressed = pressed
 
+  def __str__(self) -> str:
+    return dumps(self, default=vars, indent=2)
+
 
 class Type:
   events: ButtonEvents
   text: ButtonText
-  image: ButtonImage
+  images: ButtonImages
 
-  def __init__(self, events: ButtonEvents, text: ButtonText, image: ButtonImage) -> None:
+  def __init__(self, events: ButtonEvents, text: ButtonText, images: ButtonImages) -> None:
     self.events = ButtonEvents(**events)
     self.text = ButtonText(**text)
-    self.image = ButtonImage(**image)
+    self.images = ButtonImages(**images)
+
+  def __str__(self) -> str:
+    return dumps(self, default=vars, indent=2)

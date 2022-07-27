@@ -25,7 +25,7 @@ ref_page = {
                 "default": "",
                 "pressed": ""
             },
-            "image": {
+            "images": {
                 "default": "play",
                 "pressed": "play"
             }
@@ -38,4 +38,7 @@ page = Page(**ref_page)
 
 for button, button_type_key in page.buttonMapping.items():
   button_type = page.types.get(button_type_key)
-  print(button, button_type)
+  if not button_type:
+    continue
+  images = button_type.images
+  print(button, button_type, images)
