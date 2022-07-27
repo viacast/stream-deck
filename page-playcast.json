@@ -1,0 +1,30 @@
+{
+  "buttonMapping": {
+    "button-1": "play",
+    "button-2": "pause"
+  },
+  "images": {
+    "play": "playcast-play.png",
+    "pause": "pause.png",
+    "update-preview": "/tmp/playcast-client-stream-deck-preview.png"
+  },
+  "actions": {
+    "play": "play.sh"
+  },
+  "types": {
+    "play": {
+      "events": {
+        "onPress": "",
+        "onRelease": ""
+      },
+      "text": {
+        "default": "",
+        "pressed": ""
+      },
+      "image": {
+        "default": "play",
+        "pressed": "play"
+      }
+    }
+  }
+}

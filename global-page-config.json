@@ -1,0 +1,45 @@
+{
+  "images": {
+    "home": "home.png",
+    "previous-page": "previous-page.png",
+    "next-page": "next-page.png",
+    "status-off": "status-off.png",
+    "status-on": "status-on.png"
+  },
+  "types": {
+    "home": {
+      "actions": {
+        "onPress": "@home",
+        "onRelease": "@home"
+      },
+      "images": {
+        "default": "home.png"
+      }
+    },
+    "previous-page": {
+      "action": {
+        "onPress": "@previous-page"
+      },
+      "images": {
+        "default": "previous.png"
+      }
+    },
+    "next-page": {
+      "action": {
+        "onPress": "@next-page"
+      },
+      "images": {
+        "default": "next.png"
+      }
+    },
+    "service-status": {
+      "action": {
+        "onPress": "@restart-service"
+      },
+      "images": {
+        "default": "status-off.png"
+      }
+    }
+  }
+}
+

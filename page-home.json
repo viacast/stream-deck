@@ -1,0 +1,8 @@
+{
+  "buttonMapping": {
+    "button-1": "home",
+    "button-8": "current-page",
+    "button-25": "previous-page",
+    "button-32": "next-page"
+  }
+}
