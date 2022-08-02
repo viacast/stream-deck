@@ -19,6 +19,20 @@ class ButtonEvents:
 class ButtonText:
   default: Optional[str]
   pressed: Optional[str]
+  fontSize: Optional[int]
+
+  def __init__(self, default: str, pressed: str, fontSize: int) -> None:
+    self.default = default
+    self.pressed = pressed
+    self.fontSize = fontSize
+
+  def __str__(self) -> str:
+    return dumps(self, default=vars, indent=2)
+
+
+class ButtonFont:
+  default: Optional[str]
+  pressed: Optional[str]
 
   def __init__(self, default: str, pressed: str) -> None:
     self.default = default
@@ -43,12 +57,14 @@ class ButtonImages:
 class Type:
   events: ButtonEvents
   text: ButtonText
+  fonts: ButtonFont
   images: ButtonImages
 
-  def __init__(self, events: ButtonEvents, text: ButtonText, images: ButtonImages) -> None:
+  def __init__(self, events: ButtonEvents, text: ButtonText, images: ButtonImages, fonts: ButtonFont) -> None:
     self.events = ButtonEvents(**events)
     self.text = ButtonText(**text)
     self.images = ButtonImages(**images)
+    self.fonts = ButtonFont(**fonts)
 
   def __str__(self) -> str:
     return dumps(self, default=vars, indent=2)
