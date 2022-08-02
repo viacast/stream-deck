@@ -14,14 +14,14 @@ class Page:
 
   def __init__(self, buttonMapping: Dict[Button, TypeKey], images: Dict[ImageKey, ImagePath], actions: Dict[ActionKey, ActionPath], types: Dict[TypeKey, Type]) -> None:
     self.buttonMapping = {
-        Button(k): v
-        for k, v in buttonMapping.items()
+      Button(k): v
+      for k, v in buttonMapping.items()
     }
     self.images = images
     self.actions = actions
     self.types = {
-        k: Type(**v)
-        for k, v in types.items()
+      k: Type(**v)
+      for k, v in types.items()
     }
 
   def __str__(self) -> str:

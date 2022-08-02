@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class Button(Enum):
+  BUTTON_NULL = 'button-null'
   BUTTON_1 = 'button-1'
   BUTTON_2 = 'button-2'
   BUTTON_3 = 'button-3'
@@ -34,3 +35,12 @@ class Button(Enum):
   BUTTON_30 = 'button-30'
   BUTTON_31 = 'button-31'
   BUTTON_32 = 'button-32'
+
+  def get_key(self):
+    return list(Button).index(self) - 1
+
+  def from_key(self, key):
+    try:
+      return list(Button)[key + 1]
+    except IndexError:
+      return Button.BUTTON_NULL

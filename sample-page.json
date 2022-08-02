@@ -15,6 +15,7 @@
         "onRelease": "<ActionKey>"
       },
       "text": {
+        "fontSize": <int>,
         "default": "<str>",
         "pressed": "<str>"
       },
