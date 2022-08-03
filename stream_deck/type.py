@@ -16,7 +16,7 @@ class ButtonEvents:
     return dumps(self, default=vars, indent=2)
 
 
-class ButtonText:
+class ButtonTexts:
   default: Optional[str]
   pressed: Optional[str]
 
@@ -42,12 +42,12 @@ class ButtonImages:
 
 class Type:
   events: ButtonEvents
-  text: ButtonText
+  text: ButtonTexts
   images: ButtonImages
 
-  def __init__(self, events: ButtonEvents, text: ButtonText, images: ButtonImages) -> None:
+  def __init__(self, events: ButtonEvents, text: ButtonTexts, images: ButtonImages) -> None:
     self.events = ButtonEvents(**events)
-    self.text = ButtonText(**text)
+    self.text = ButtonTexts(**text)
     self.images = ButtonImages(**images)
 
   def __str__(self) -> str:
